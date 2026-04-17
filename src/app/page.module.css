@@ -1,0 +1,16 @@
+/* AIDP 标注工作区样式 */
+
+.workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 1280px;
+  background-color: #f7f8fa;
+  overflow: hidden;
+}
+
+.mainArea {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}

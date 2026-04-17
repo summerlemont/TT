@@ -1,0 +1,110 @@
+/* 骨架屏样式 */
+
+.skeletonScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 1280px;
+  background-color: #f7f8fa;
+}
+
+.skeletonHeader {
+  height: 56px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e6eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.skeletonHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.skeletonHeaderRight {
+  display: flex;
+  gap: 8px;
+}
+
+.skeletonMain {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.skeletonLeftNav {
+  width: 180px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e6eb;
+  padding: 16px;
+}
+
+.skeletonNavItem {
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.skeletonNavSpacer {
+  margin-top: 24px;
+}
+
+.skeletonContent {
+  flex: 1;
+  background-color: #ffffff;
+  margin: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skeletonContentInner {
+  padding: 24px;
+}
+
+.skeletonCard {
+  height: 120px;
+  margin-bottom: 16px;
+}
+
+.skeletonCardRow {
+  display: flex;
+  gap: 16px;
+}
+
+.skeletonHalfCard {
+  flex: 1;
+  height: 200px;
+}
+
+.skeletonRightPanel {
+  width: 340px;
+  background-color: #ffffff;
+}
+
+.skeletonRightContent {
+  padding: 20px;
+}
+
+.skeletonRightSpacer {
+  margin-top: 16px;
+}
+
+.skeletonSuggestion {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.skeletonBlock {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

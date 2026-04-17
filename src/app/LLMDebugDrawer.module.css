@@ -1,0 +1,229 @@
+/* LLM 调试抽屉样式 */
+
+.drawerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.drawer {
+  width: 600px;
+  max-width: 90vw;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e6eb;
+  background-color: #ffffff;
+}
+
+.drawerTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d2129;
+  margin: 0;
+}
+
+.drawerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mockToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #4e5969;
+  cursor: pointer;
+}
+
+.mockToggle input {
+  cursor: pointer;
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  color: #86909c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background-color: #f7f8fa;
+  color: #1d2129;
+}
+
+.drawerContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.promptSection {
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.sectionLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d2129;
+}
+
+.copyBtn {
+  padding: 4px 12px;
+  font-size: 12px;
+  border: 1px solid #e5e6eb;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #4e5969;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover:not(:disabled) {
+  border-color: #1966ff;
+  color: #1966ff;
+}
+
+.copyBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.promptTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e6eb;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  line-height: 1.6;
+  resize: vertical;
+  color: #1d2129;
+  background-color: #ffffff;
+}
+
+.promptTextarea:focus {
+  outline: none;
+  border-color: #1966ff;
+}
+
+.promptTextarea::placeholder {
+  color: #86909c;
+}
+
+.outputArea {
+  min-height: 200px;
+  max-height: 300px;
+  padding: 12px;
+  border: 1px solid #e5e6eb;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  line-height: 1.6;
+  background-color: #f7f8fa;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #1d2129;
+}
+
+.loading {
+  color: #1966ff;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.drawerFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #e5e6eb;
+  background-color: #ffffff;
+}
+
+.resetBtn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #e5e6eb;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #4e5969;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resetBtn:hover {
+  border-color: #1966ff;
+  color: #1966ff;
+}
+
+.sendBtn {
+  padding: 8px 24px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background: #1966ff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: #0050ff;
+}
+
+.sendBtn:disabled {
+  background: #e5e6eb;
+  color: #86909c;
+  cursor: not-allowed;
+}

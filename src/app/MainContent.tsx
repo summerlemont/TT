@@ -167,8 +167,8 @@ function StoreDiagnosisContent({ caseData, onOpenLLMDebug }: StoreDiagnosisConte
               <div className={styles.traceLabel}>Output（模型输出）</div>
               <div className={styles.traceContent}>
                 {Array.isArray(traceData.diagnosisNode.output) ? (
-                  traceData.diagnosisNode.output.map((item, index) => (
-                    <div key={index} style={{ marginBottom: index < traceData.diagnosisNode.output.length - 1 ? '16px' : '0', paddingBottom: index < traceData.diagnosisNode.output.length - 1 ? '16px' : '0', borderBottom: index < traceData.diagnosisNode.output.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
+                  traceData.diagnosisNode.output.map((item, index, arr) => (
+                    <div key={index} style={{ marginBottom: index < arr.length - 1 ? '16px' : '0', paddingBottom: index < arr.length - 1 ? '16px' : '0', borderBottom: index < arr.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
                       <div className={styles.outputBlock}>
                         <span className={styles.outputLabel}>problem:</span>
                         <div className={styles.outputProblem}>{item.problem}</div>
